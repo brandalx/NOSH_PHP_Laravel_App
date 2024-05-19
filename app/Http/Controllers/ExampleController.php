@@ -18,7 +18,12 @@ class ExampleController extends Controller
 
     //returning blade template
 public function homePage() {
-     return  view("homePage");
+
+    //imagine we loaded data from the database
+
+    $ourName = "Brandon";
+    //to var name assigning ourName var
+     return  view("homePage", ['name' => $ourName, "catname"=> "MeowsALot"]);
     }
 
 

@@ -12,5 +12,9 @@
     <p>A great number is {{2+2}}</p>
     <p>The current year is {{date('Y')}}</p>
     <a href="/about"> Go to the about page</a>
+
+    {{-- //data passed from example controller --}}
+    <h3> our name - {{$name}}</h3>
+    <h3> cat name - {{$catname}}</h3>
 </body>
 </html>
