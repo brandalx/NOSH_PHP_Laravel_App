@@ -1,29 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <h1> this is blade template</h1>
-{{-- //dynamic data  --}}
-    <p>A great number is {{2+2}}</p>
-    <p>The current year is {{date('Y')}}</p>
-    <a href="/about"> Go to the about page</a>
+{{-- //include template --}}
+{{-- @include('header') --}}
+<x-layout>
 
-    {{-- //data passed from example controller --}}
-    <h3> our name - {{$name}}</h3>
-    <h3> cat name - {{$catname}}</h3>
+  <div class="container py-md-5">
+    <div class="row align-items-center">
+      <div class="col-lg-7 py-3 py-md-5">
+        <h1 class="display-3">Remember Writing?</h1>
+        <p class="lead text-muted">Are you sick of short tweets and impersonal &ldquo;shared&rdquo; posts that are reminiscent of the late 90&rsquo;s email forwards? We believe getting back to actually writing is the key to enjoying the internet again.</p>
+      </div>
+      <div class="col-lg-5 pl-lg-5 pb-3 py-lg-5">
+        <form action="#" method="POST" id="registration-form">
+          <div class="form-group">
+            <label for="username-register" class="text-muted mb-1"><small>Username</small></label>
+            <input name="username" id="username-register" class="form-control" type="text" placeholder="Pick a username" autocomplete="off" />
+          </div>
 
-    <h3> All animals  </h3>
+          <div class="form-group">
+            <label for="email-register" class="text-muted mb-1"><small>Email</small></label>
+            <input name="email" id="email-register" class="form-control" type="text" placeholder="you@example.com" autocomplete="off" />
+          </div>
 
-{{-- //loop over all objects --}}
-    <ul>
-        @foreach($allAnimals as $animal )
-<li> {{$animal}} </li>
-        @endforeach
-    </ul>
-</body>
-</html>
+          <div class="form-group">
+            <label for="password-register" class="text-muted mb-1"><small>Password</small></label>
+            <input name="password" id="password-register" class="form-control" type="password" placeholder="Create a password" />
+          </div>
+
+          <div class="form-group">
+            <label for="password-register-confirm" class="text-muted mb-1"><small>Confirm Password</small></label>
+            <input name="password" id="password-register-confirm" class="form-control" type="password" placeholder="Confirm password" />
+          </div>
+
+          <button type="submit" class="py-3 mt-4 btn btn-lg btn-success btn-block">Sign up for OurApp</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</x-layout>
+   

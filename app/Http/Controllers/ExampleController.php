@@ -30,7 +30,7 @@ public function homePage() {
 
 
     public function aboutPage() {
-        return     "<h1> Homepage </h1> <a href='/about'> About Us </a>"; 
+        return    view("single-post");
     }
 
 
