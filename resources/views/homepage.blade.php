@@ -16,5 +16,14 @@
     {{-- //data passed from example controller --}}
     <h3> our name - {{$name}}</h3>
     <h3> cat name - {{$catname}}</h3>
+
+    <h3> All animals  </h3>
+
+{{-- //loop over all objects --}}
+    <ul>
+        @foreach($allAnimals as $animal )
+<li> {{$animal}} </li>
+        @endforeach
+    </ul>
 </body>
 </html>

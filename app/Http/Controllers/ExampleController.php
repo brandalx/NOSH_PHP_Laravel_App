@@ -22,8 +22,10 @@ public function homePage() {
     //imagine we loaded data from the database
 
     $ourName = "Brandon";
+    $animals = ["MeowsAlot", "Barksalot", "Prsalot"];
+
     //to var name assigning ourName var
-     return  view("homePage", ['name' => $ourName, "catname"=> "MeowsALot"]);
+     return  view("homePage", ['allAnimals' =>$animals, 'name' => $ourName, "catname"=> "MeowsALot"]);
     }
 
 
