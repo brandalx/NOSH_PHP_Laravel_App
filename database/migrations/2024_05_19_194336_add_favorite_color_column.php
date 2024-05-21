@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-
+//add here to not wipe all of the data
 return new class extends Migration
 {
     /**
@@ -12,9 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         //
-        Schema::table('users', function($table){
-$table->string("FavoriteColor");
-        });
+//         Schema::table('users', function($table){
+// $table->string("FavoriteColor");
+//         });
     }
 
     /**
@@ -23,8 +23,8 @@ $table->string("FavoriteColor");
     public function down(): void
     {
         //
-        Schema::table("users", function($table){
-            $table->dropColumn("FavoriteColor");
-        });
+        // Schema::table("users", function($table){
+        //     $table->dropColumn("FavoriteColor");
+        // });
     }
 };

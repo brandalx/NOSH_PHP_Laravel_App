@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ExampleController;
+
 // old way to use
 // Route::get('/', function () {
 //     return "<h1> Homepage </h1> <a href='/about'> About Us </a>"; 
@@ -13,7 +15,11 @@ use App\Http\Controllers\ExampleController;
 // });
 
 
+//new way to use
+
 
 Route::get('/', [ExampleController::class, "homePage"]);
 
 Route::get('/about', [ExampleController::class, "aboutPage"]);
+
+Route::post("/register", [UserController::class, "register"] );
